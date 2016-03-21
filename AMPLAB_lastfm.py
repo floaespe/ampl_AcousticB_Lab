@@ -59,20 +59,20 @@ for i in range(len(tags.keys())):
     tags_per_row = tags[tags.keys()[i]]
     for j in tags_per_row:
         if j =='mellow':
-            new_dict[tags.keys()[i]] = 'mellow'     # Así para crear diccionario
-            #new_dict = [[tags.keys()[i],'mellow']]   # Así para crear lista
+            new_dict[tags.keys()[i]] = 'mellow'     # Crear diccionario
+
         if j =='love':
             new_dict[tags.keys()[i]] = 'love'
-            #new_dict.append([tags.keys()[i],'love'])
+            
         if j =='sad':
             new_dict[tags.keys()[i]] = 'sad'
-            #new_dict.append([tags.keys()[i],'sad'])
+            
         if j =='psychedelic':
             if tags.keys()[i] == "c24451ea-b70d-46b9-99fb-93e43ffdf4fa":
                 continue
             else:
                 new_dict[tags.keys()[i]] = 'psychedelic'
-                #new_dict.append([tags.keys()[i],'psychedelic'])
+                
 print len(new_dict)
 
 
