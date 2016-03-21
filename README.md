@@ -6,5 +6,6 @@ You can find:
 
 - Master code: it contains a script that create a dicctionary from the provided 2015 dataset by AB.
 
-- DataSet: it was shortened, from the original.
-- Original DataSet.
+- dataShort: it was shortened, from the original.
+
+- dictMood: final .CSV with the obtain moods from the selection process.
