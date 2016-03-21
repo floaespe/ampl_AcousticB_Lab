@@ -5,8 +5,6 @@
 
 # Tag-cleanining: only keep tags with weight 100 and clean them.
 
-# In[19]:
-
 import re
 tags = {}
 for line in open('dataShort.csv', 'r'):
@@ -22,14 +20,13 @@ for line in open('dataShort.csv', 'r'):
             if tag != '':
                 tags[mbid].append(tag)
 print "Number of dataset elements: ",len(tags),"\n"
+
 # let's see what we've got: 10 first values
 for mbid in tags.keys()[:10]: 
     print "MusicBrainz ID ", mbid," Tags ", tags[mbid]
 
 
 # Tag histogram in order to see which are the most frequent tags.
-
-# In[20]:
 
 all_tags = []
 for mbid, track_tags in tags.iteritems():
@@ -57,8 +54,6 @@ print sorted_tags_hist[:100]
 
 # Searching for tags related to decade: dictionary creation.
 
-# In[31]:
-
 new_dict = {}
 for i in range(len(tags.keys())):
     tags_per_row = tags[tags.keys()[i]]
@@ -83,17 +78,12 @@ print len(new_dict)
 
 # Dictionary to CSV file. This CSV will be evaluated on AcousticBrainz.
 
-# In[32]:
-
 import csv
 writer = csv.writer(open('dictMood.csv','w'))
 for key, value in new_dict.items():
     key = key.replace('"', '')
     writer.writerow([key,value])
     print key, value
-
-
-# In[ ]:
 
 
 
